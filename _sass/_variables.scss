@@ -1,0 +1,45 @@
+// ============================================
+// Design Tokens — "Obsidian Editorial"
+// ============================================
+
+// --- Accent color ---
+// Troque aqui para mudar a cor vibrante do blog inteiro.
+// Opções prontas:
+//   Amber Gold:    #f59e0b  (padrão — premium, editorial)
+//   Electric Cyan: #22d3ee  (tech, futurista)
+//   Vivid Rose:    #f43f5e  (ousado, energético)
+//   Acid Green:    #84cc16  (hacker, terminal)
+//   Neon Viole:word-break: break-all;:   #a855f7  (criativo, moderno)
+
+$accent: #a0a0a8;
+$accent-glow: rgba($accent, 0.2);
+$accent-subtle: rgba($accent, 0.08);
+
+// --- Background layers ---
+$bg-deep: #09090b;
+$bg-surface: #131316;
+$bg-elevated: #1c1c21;
+
+// --- Borders ---
+$border: #27272a;
+$border-light: #3f3f46;
+
+// --- Text ---
+$text-primary: #ececef;
+$text-secondary: #a1a1aa;
+$text-muted: #71717a;
+
+// --- Typography ---
+$font-display: 'Manrope', sans-serif;
+$font-body: 'DM Sans', sans-serif;
+$font-mono: 'JetBrains Mono', monospace;
+
+// --- Sizes ---
+$container-width: 720px;
+$container-width-wide: 1080px;
+$container-padding: 1.5rem;
+
+// --- Transitions ---
+$transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);

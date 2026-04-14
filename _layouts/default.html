@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <!-- Accent gradient bar -->
+  <div class="accent-bar" aria-hidden="true"></div>
+
+  <!-- Grain texture overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  {% include header.html %}
+
+  <main class="main">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    // Staggered fade-in animation on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach((el, i) => {
+        el.style.animationDelay = `${i * 0.08}s`;
+        el.classList.add('fade-in--active');
+      });
+    });
+
+  </script>
+</body>
+</html>

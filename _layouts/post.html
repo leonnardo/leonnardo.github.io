@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<article class="post container--narrow">
+  <header class="post__header fade-in">
+    <div class="post__meta">
+      <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%d %b %Y" }}
+      </time>
+    </div>
+    <h1 class="post__title">{{ page.title }}</h1>
+  </header>
+
+  <div class="post__content prose fade-in">
+    {{ content }}
+  </div>
+
+  <footer class="post__footer fade-in">
+    <a href="{{ '/' | relative_url }}" class="post__back">
+      <span class="post__back-arrow">&larr;</span> blog
+    </a>
+  </footer>
+</article>

@@ -1,0 +1,113 @@
+@use "variables" as *;
+
+// ============================================
+// Layout — Container, Header, Footer, Nav
+// ============================================
+
+.container {
+  max-width: $container-width-wide;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+.container--narrow {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+// --- Main ---
+.main {
+  min-height: calc(100vh - 160px);
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+}
+
+// --- Header / Nav ---
+.site-header {
+  position: sticky;
+  top: 2px; // abaixo da accent-bar
+  z-index: 50;
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  background-color: rgba($bg-deep, 0.85);
+  border-bottom: 1px solid $border;
+}
+
+.nav {
+  max-width: $container-width-wide;
+  margin: 0 auto;
+  padding: 1rem $container-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-family: $font-display;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.nav__icons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav__icon {
+  color: $text-muted;
+  transition: color $transition-fast;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+// --- Footer ---
+.site-footer {
+  border-top: 1px solid $border;
+  padding: 2.5rem 0;
+}
+
+.footer__content {
+  max-width: $container-width-wide;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  text-align: center;
+}
+
+.footer__copy {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  color: $text-muted;
+}
+
+.footer__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__link {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  color: $text-muted;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $accent;
+  }
+}

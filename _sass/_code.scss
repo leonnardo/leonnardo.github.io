@@ -1,0 +1,54 @@
+@use "variables" as *;
+
+// ============================================
+// Code — Syntax highlighting (Rouge)
+// ============================================
+
+// --- Code blocks ---
+.prose pre {
+  background-color: $bg-surface;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.65;
+
+  code {
+    background: none;
+    border: none;
+    padding: 0;
+    color: $text-secondary;
+    font-family: $font-mono;
+    font-size: inherit;
+  }
+}
+
+// --- Rouge token colors (Tokyo Night adapted) ---
+.highlight {
+  .c, .c1, .cm, .cs { color: #565f89; font-style: italic; } // Comments — storm gray
+  .k, .kd, .kn, .kp, .kr { color: #9d7cd8; }                 // Keywords — purple
+  .kc { color: #ff9e64; }                                      // Constant keywords — orange
+  .kt { color: #2ac3de; }                                      // Types — cyan
+  .s, .s1, .s2, .sb, .sc, .sh { color: #9ece6a; }             // Strings — green
+  .si { color: #7dcfff; }                                       // String interpolation — light blue
+  .sr { color: #b4f9f8; }                                       // Regex — teal
+  .na { color: #7aa2f7; }                                       // Attributes — blue
+  .nb { color: #2ac3de; }                                       // Builtins — cyan
+  .nc { color: #e0af68; }                                       // Class names — yellow
+  .nf, .fm { color: #7aa2f7; }                                  // Functions — blue
+  .no { color: #ff9e64; }                                       // Constants — orange
+  .ni { color: #c0caf5; }                                       // Entity — foreground
+  .ne { color: #f7768e; }                                       // Exceptions — red
+  .nn { color: #a9b1d6; }                                       // Namespace — muted foreground
+  .nt { color: #f7768e; }                                       // Tags — red/pink
+  .nv, .vi, .vg, .vc { color: #c0caf5; }                       // Variables — foreground
+  .o, .ow { color: #89ddff; }                                   // Operators — light cyan
+  .p { color: #a9b1d6; }                                         // Punctuation
+  .m, .mi, .mf, .mh, .mo { color: #ff9e64; }                   // Numbers — orange
+  .dl { color: #9ece6a; }                                        // Delimiters — green
+  .err { color: #f7768e; text-decoration: underline; }          // Errors — red
+  .gd { color: #f7768e; background-color: rgba(247, 118, 142, 0.1); } // Diff deleted
+  .gi { color: #9ece6a; background-color: rgba(158, 206, 106, 0.1); } // Diff inserted
+}

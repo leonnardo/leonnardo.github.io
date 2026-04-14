@@ -1,0 +1,159 @@
+@use "variables" as *;
+
+// ============================================
+// Post — Hero, Cards & Article Styles
+// ============================================
+
+// --- Hero (homepage) ---
+.hero {
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid $border;
+  margin-bottom: 2rem;
+}
+
+.hero__title {
+  font-family: $font-display;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: $text-primary;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero__tagline {
+  font-size: 1rem;
+  color: $text-muted;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+// --- Post list ---
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  padding: 0.65rem 0;
+
+  &:hover .post-item__title {
+    color: $text-primary;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.post-item__date {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  color: $text-muted;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 90px;
+}
+
+.post-item__sep {
+  width: 1px;
+  align-self: stretch;
+  background-color: $border-light;
+  margin: 0 1rem;
+  flex-shrink: 0;
+}
+
+.post-item__title {
+  font-family: $font-body;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $text-secondary;
+  transition: color $transition-fast;
+}
+
+// --- Article (single post) ---
+.post__header {
+  padding: 3rem 0 1rem;
+  border-bottom: 1px solid $border;
+  margin-bottom: 1.5rem;
+}
+
+.post__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post__date {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  color: $text-muted;
+}
+
+.post__reading-time {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  color: $text-muted;
+
+  &::before {
+    content: '·';
+    margin-right: 1rem;
+    color: $border-light;
+  }
+}
+
+.post__title {
+  font-family: $font-display;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: $text-primary;
+}
+
+.post__tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.post__tag {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  color: $accent;
+  background-color: $accent-subtle;
+  padding: 0.15em 0.6em;
+  border-radius: 3px;
+}
+
+// --- Post footer ---
+.post__footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid $border;
+  text-align: right;
+}
+
+.post__back {
+  font-family: $font-mono;
+  font-size: 0.85rem;
+  color: $text-muted;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $accent;
+
+    .post__back-arrow {
+      transform: translateX(-3px);
+    }
+  }
+}
+
+.post__back-arrow {
+  transition: transform $transition-fast;
+}

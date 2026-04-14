@@ -1,0 +1,49 @@
+# Site Settings
+title: "lrabello.dev"
+description: "pensamentos sobre tecnologia, código e engenharia de software"
+author: "Leo Rabello"
+url: "https://lrabello.dev" # ex: https://lrabello.github.io
+baseurl: "" # ex: /blog se estiver em subpath
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Sass
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Pagination
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules

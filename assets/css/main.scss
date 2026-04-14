@@ -1,0 +1,13 @@
+---
+# Front matter necessário para o Jekyll processar SCSS
+---
+
+@use "variables" as *;
+@use "base";
+@use "layout";
+@use "typography";
+@use "code";
+@use "post";
+@use "about";
+@use "search";
+@use "animations";

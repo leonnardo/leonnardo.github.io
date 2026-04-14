@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<section class="hero fade-in">
+  <h1 class="hero__title">blog</h1>
+  <p class="hero__tagline">half-baked opinions and hot takes nobody asked for. you've been warned.</p>
+</section>
+
+<section class="posts">
+  {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+  {% for post in sorted_posts %}
+  <a href="{{ post.url | relative_url }}" class="post-item fade-in">
+    <time class="post-item__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
+    <span class="post-item__sep"></span>
+    <span class="post-item__title">{{ post.title }}</span>
+  </a>
+  {% endfor %}
+</section>
