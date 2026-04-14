@@ -1,9 +1,9 @@
 # Site Settings
 title: "lrabello.dev"
-description: "pensamentos sobre tecnologia, código e engenharia de software"
+description: "half-baked opinions, hard-earned lessons, and hot takes on software engineering"
 author: "Leo Rabello"
-url: "https://lrabello.dev" # ex: https://lrabello.github.io
-baseurl: "" # ex: /blog se estiver em subpath
+url: "https://lrabello.dev"
+baseurl: ""
 
 # Build Settings
 markdown: kramdown
